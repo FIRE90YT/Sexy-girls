@@ -1,0 +1,370 @@
+
+export const gamesConfig = {
+  // Games Section Configuration
+  section: {
+    enabled: true,
+    title: "Popular Game Servers",
+    subtitle: "Choose from our most popular game hosting options with optimized configurations",
+    showOnHomepage: true
+  },
+  
+  // Available Games
+  games: [
+    {
+      id: "minecraft",
+      name: "Minecraft",
+      description: "Build, explore, and survive in infinite worlds",
+      price: "$4.99/month",
+      players: "1-200 players",
+      icon: "🟫",
+      popular: true,
+      enabled: false,
+      hasPage: true,
+      features: ["Instant setup", "Mod support", "Auto backups", "24/7 uptime"],
+      category: "Survival",
+      plans: [
+        {
+          id: "coal",
+          name: "Coal Block",
+          price: "$3.99",
+          period: "month",
+          description: "Perfect for small servers and testing",
+          ram: "1GB RAM",
+          cpu: "1 vCPU",
+          storage: "5GB SSD",
+          players: "1-10 players",
+          features: ["Basic mod support", "Daily backups", "24/7 support", "DDoS protection"],
+          popular: false,
+          buttonText: "Choose Coal"
+        },
+        {
+          id: "iron",
+          name: "Iron Block",
+          price: "$7.99",
+          period: "month",
+          description: "Great for small communities",
+          ram: "2GB RAM",
+          cpu: "2 vCPU",
+          storage: "10GB SSD",
+          players: "1-25 players",
+          features: ["Full mod support", "Automated backups", "Priority support", "Plugin management", "Custom worlds"],
+          popular: false,
+          buttonText: "Choose Iron"
+        },
+        {
+          id: "diamond",
+          name: "Diamond Block",
+          price: "$15.99",
+          period: "month",
+          description: "Most popular choice for growing servers",
+          ram: "4GB RAM",
+          cpu: "4 vCPU",
+          storage: "25GB SSD",
+          players: "1-100 players",
+          features: ["Everything in Iron", "Advanced monitoring", "Custom modpacks", "Dedicated IP", "White-label options"],
+          popular: true,
+          buttonText: "Choose Diamond"
+        },
+        {
+          id: "netherite",
+          name: "Netherite Block",
+          price: "$29.99",
+          period: "month",
+          description: "Premium performance for large communities",
+          ram: "8GB RAM",
+          cpu: "6 vCPU",
+          storage: "50GB SSD",
+          players: "1-200 players",
+          features: ["Everything in Diamond", "Performance optimization", "Advanced analytics", "Custom development", "Enterprise support"],
+          popular: false,
+          buttonText: "Choose Netherite"
+        },
+        {
+          id: "bedrock",
+          name: "Bedrock Block",
+          price: "$49.99",
+          period: "month",
+          description: "Ultimate power for massive servers",
+          ram: "16GB RAM",
+          cpu: "8 vCPU",
+          storage: "100GB SSD",
+          players: "Unlimited",
+          features: ["Everything in Netherite", "Dedicated hardware", "Custom solutions", "24/7 phone support", "SLA guarantee"],
+          popular: false,
+          buttonText: "Choose Bedrock"
+        }
+      ]
+    },
+    {
+      id: "cs2",
+      name: "Counter-Strike 2",
+      description: "Competitive tactical shooter experience",
+      price: "$8.99/month",
+      players: "1-64 players",
+      icon: "🔫",
+      popular: false,
+      enabled: true,
+      hasPage: true,
+      features: ["Anti-cheat protection", "Custom maps", "Tournament ready", "Low latency"],
+      category: "FPS",
+      plans: [
+        {
+          id: "dust",
+          name: "Dust Package",
+          price: "$6.99",
+          period: "month",
+          description: "Entry-level CS2 server hosting",
+          ram: "2GB RAM",
+          cpu: "2 vCPU",
+          storage: "10GB SSD",
+          players: "1-16 players",
+          features: ["Anti-cheat enabled", "Basic maps", "24/7 support", "DDoS protection"],
+          popular: false,
+          buttonText: "Choose Dust"
+        },
+        {
+          id: "mirage",
+          name: "Mirage Package",
+          price: "$12.99",
+          period: "month",
+          description: "Perfect for competitive matches",
+          ram: "4GB RAM",
+          cpu: "4 vCPU",
+          storage: "20GB SSD",
+          players: "1-32 players",
+          features: ["Everything in Dust", "Tournament mode", "Custom maps", "Advanced stats"],
+          popular: true,
+          buttonText: "Choose Mirage"
+        },
+        {
+          id: "inferno",
+          name: "Inferno Package",
+          price: "$24.99",
+          period: "month",
+          description: "High-performance for serious gamers",
+          ram: "8GB RAM",
+          cpu: "6 vCPU",
+          storage: "40GB SSD",
+          players: "1-64 players",
+          features: ["Everything in Mirage", "Professional configs", "Admin tools", "Priority support"],
+          popular: false,
+          buttonText: "Choose Inferno"
+        }
+      ]
+    },
+    {
+      id: "rust",
+      name: "Rust",
+      description: "Survival game with crafting and building",
+      price: "$12.99/month",
+      players: "1-300 players",
+      icon: "⚙️",
+      popular: false,
+      enabled: true,
+      hasPage: true,
+      features: ["Wipe scheduling", "Plugin support", "Admin tools", "Performance optimized"],
+      category: "Survival",
+      plans: [
+        {
+          id: "scrap",
+          name: "Scrap Tier",
+          price: "$9.99",
+          period: "month",
+          description: "Basic Rust server for small groups",
+          ram: "4GB RAM",
+          cpu: "4 vCPU",
+          storage: "20GB SSD",
+          players: "1-50 players",
+          features: ["Auto wipes", "Basic plugins", "24/7 support", "DDoS protection"],
+          popular: false,
+          buttonText: "Choose Scrap"
+        },
+        {
+          id: "metal",
+          name: "Metal Tier",
+          price: "$19.99",
+          period: "month",
+          description: "Enhanced performance for growing clans",
+          ram: "8GB RAM",
+          cpu: "6 vCPU",
+          storage: "40GB SSD",
+          players: "1-150 players",
+          features: ["Everything in Scrap", "Custom maps", "Advanced plugins", "Clan management"],
+          popular: true,
+          buttonText: "Choose Metal"
+        },
+        {
+          id: "highqual",
+          name: "High Quality Tier",
+          price: "$39.99",
+          period: "month",
+          description: "Premium Rust hosting for large communities",
+          ram: "16GB RAM",
+          cpu: "8 vCPU",
+          storage: "80GB SSD",
+          players: "1-300 players",
+          features: ["Everything in Metal", "Performance optimization", "Custom development", "Priority support"],
+          popular: false,
+          buttonText: "Choose High Quality"
+        }
+      ]
+    },
+    {
+      id: "ark",
+      name: "ARK: Survival Evolved",
+      description: "Dinosaur survival adventure game",
+      price: "$15.99/month",
+      players: "1-150 players",
+      icon: "🦕",
+      popular: false,
+      enabled: true,
+      hasPage: true,
+      features: ["Taming multipliers", "Mod support", "Cluster support", "Custom settings"],
+      category: "Survival",
+      plans: [
+        {
+          id: "thatch",
+          name: "Thatch Base",
+          price: "$12.99",
+          period: "month",
+          description: "Basic ARK server for new survivors",
+          ram: "6GB RAM",
+          cpu: "4 vCPU",
+          storage: "30GB SSD",
+          players: "1-50 players",
+          features: ["Basic mods", "Standard rates", "24/7 support", "Auto restarts"],
+          popular: false,
+          buttonText: "Choose Thatch"
+        },
+        {
+          id: "stone",
+          name: "Stone Fortress",
+          price: "$24.99",
+          period: "month",
+          description: "Enhanced ARK experience for tribes",
+          ram: "12GB RAM",
+          cpu: "6 vCPU",
+          storage: "60GB SSD",
+          players: "1-100 players",
+          features: ["Everything in Thatch", "Custom rates", "Advanced mods", "Cluster support"],
+          popular: true,
+          buttonText: "Choose Stone"
+        },
+        {
+          id: "metal",
+          name: "Metal Citadel",
+          price: "$44.99",
+          period: "month",
+          description: "Ultimate ARK hosting for large tribes",
+          ram: "24GB RAM",
+          cpu: "8 vCPU",
+          storage: "120GB SSD",
+          players: "1-150 players",
+          features: ["Everything in Stone", "Performance optimization", "Custom development", "Premium support"],
+          popular: false,
+          buttonText: "Choose Metal"
+        }
+      ]
+    },
+    {
+      id: "valheim",
+      name: "Valheim",
+      description: "Viking survival and exploration",
+      price: "$6.99/month",
+      players: "1-10 players",
+      icon: "⚔️",
+      popular: false,
+      enabled: true,
+      hasPage: true,
+      features: ["World persistence", "Plus support", "Custom worlds", "Backup system"],
+      category: "Survival",
+      plans: [
+        {
+          id: "meadows",
+          name: "Meadows Package",
+          price: "$5.99",
+          period: "month",
+          description: "Perfect for small Viking crews",
+          ram: "2GB RAM",
+          cpu: "2 vCPU",
+          storage: "10GB SSD",
+          players: "1-5 players",
+          features: ["World backups", "Mod support", "24/7 support", "Auto updates"],
+          popular: false,
+          buttonText: "Choose Meadows"
+        },
+        {
+          id: "blackforest",
+          name: "Black Forest Package",
+          price: "$9.99",
+          period: "month",
+          description: "Enhanced Viking adventures",
+          ram: "4GB RAM",
+          cpu: "4 vCPU",
+          storage: "20GB SSD",
+          players: "1-10 players",
+          features: ["Everything in Meadows", "Plus support", "Custom worlds", "Priority support"],
+          popular: true,
+          buttonText: "Choose Black Forest"
+        }
+      ]
+    },
+    {
+      id: "gmod",
+      name: "Garry's Mod",
+      description: "Physics sandbox with endless possibilities",
+      price: "$7.99/month",
+      players: "1-128 players",
+      icon: "🎮",
+      popular: false,
+      enabled: true,
+      hasPage: true,
+      features: ["Workshop content", "Custom game modes", "Lua scripting", "Add-on support"],
+      category: "Sandbox",
+      plans: [
+        {
+          id: "sandbox",
+          name: "Sandbox Starter",
+          price: "$6.99",
+          period: "month",
+          description: "Basic GMod server for creativity",
+          ram: "2GB RAM",
+          cpu: "2 vCPU",
+          storage: "15GB SSD",
+          players: "1-32 players",
+          features: ["Workshop content", "Basic addons", "24/7 support", "Auto updates"],
+          popular: false,
+          buttonText: "Choose Sandbox"
+        },
+        {
+          id: "darkrp",
+          name: "DarkRP Package",
+          price: "$12.99",
+          period: "month",
+          description: "Perfect for roleplay servers",
+          ram: "4GB RAM",
+          cpu: "4 vCPU",
+          storage: "30GB SSD",
+          players: "1-64 players",
+          features: ["Everything in Sandbox", "DarkRP optimized", "Custom jobs", "Advanced configs"],
+          popular: true,
+          buttonText: "Choose DarkRP"
+        },
+        {
+          id: "ttt",
+          name: "TTT Ultimate",
+          price: "$19.99",
+          period: "month",
+          description: "High-performance for popular game modes",
+          ram: "8GB RAM",
+          cpu: "6 vCPU",
+          storage: "50GB SSD",
+          players: "1-128 players",
+          features: ["Everything in DarkRP", "TTT optimized", "Custom maps", "Premium addons"],
+          popular: false,
+          buttonText: "Choose TTT"
+        }
+      ]
+    }
+  ]
+};
