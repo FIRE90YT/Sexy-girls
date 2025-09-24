@@ -1,0 +1,67 @@
+Hey db0dc42786ef1663fc4514fe919c1c62,
+
+Thanks for purchasing my resource!
+
+You can edit the whole site information from siteconfig folder read readme.md for me information.
+
+🚫 Just a friendly reminder: Reselling or redistributing this resource is strictly prohibited. If our system detects such activity, your license will be suspended and you may be banned from BuiltByBit.
+
+🔧 Support Server: https://discord.phantwalker.com
+🔑 License Key: db0dc42786ef1663fc4514fe919c1c62 (You'll need this inside the Discord server for support.)
+
+🚀 Setup Instructions (VPS Only)
+1. Upload & Build
+Upload the full project to your VPS and run:
+
+
+cd /path/to/your/project
+npm install
+chmod +x node_modules/.bin/vite
+npm run build
+The build will be generated in dist/
+
+2. Configure NGINX
+Create a new site config file:
+
+
+sudo nano /etc/nginx/sites-available/gamehostpro
+Paste this config:
+
+
+server {
+    listen 80;
+    server_name yourdomain.com www.yourdomain.com;
+
+    root /path_to_your_files/gamehostpro/dist;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+}
+Replace:
+
+yourdomain.com with your actual domain
+
+root path with the full path to your dist folder
+
+Now enable the site:
+
+
+sudo ln -s /etc/nginx/sites-available/gamehostpro /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+3. Secure with SSL (HTTPS)
+Install Certbot:
+
+sudo apt install certbot python3-certbot-nginx
+Request SSL certificate:
+
+
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+Choose the redirect option when prompted to force HTTPS.
+
+4. Done 🎉
+You’re now live and secure. Visit https://yourdomain.com to check your deployed app.
+
+Need help? Join Support Server.
